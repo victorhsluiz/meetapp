@@ -2,16 +2,16 @@
 
 const Antl = use('Antl')
 
-class UserStore {
+class UserUpdate {
   get validateAll () {
     return true
   }
 
   get rules () {
     return {
-      username: 'required',
-      email: 'required|email|unique:users,email',
-      password: 'required|confirmed'
+      name: 'string',
+      password: 'confirmed',
+      preferences: 'array'
     }
   }
 
@@ -20,4 +20,4 @@ class UserStore {
   }
 }
 
-module.exports = UserStore
+module.exports = UserUpdate

@@ -24,7 +24,7 @@ class MeetupSubscriptionController {
     }
 
     await MeetupSubscription.create({
-      meetup_id: meetup,
+      meetup_id: meetup.id,
       user_id: user
     })
 

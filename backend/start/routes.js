@@ -12,6 +12,7 @@ Route.group(() => {
   Route.post('/meetups', 'MeetupController.store').validator('Meetup')
   Route.get('/meetups/:id', 'MeetupController.show')
   Route.post('/meetups/:id/subscribe', 'MeetupSubscriptionController.store')
+  Route.delete('/meetups/:id/subscribe', 'MeetupSubscriptionController.destroy')
 
   Route.get('/files/:id', 'FileController.show')
   Route.post('/files', 'FileController.store')
